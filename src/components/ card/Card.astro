@@ -1,0 +1,36 @@
+---
+// Card.astro
+interface Props {
+  imageUrl: string;
+  imageAlt: string;
+  title: string;
+  description: string;
+  category: string;
+  date: string;
+  linkUrl: string;
+}
+
+const { imageUrl, imageAlt, title, description, category, date, linkUrl} = Astro.props as Props;
+
+---
+
+<div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-lg my-4">
+    <!-- Imagen de la Carta -->
+    <a href={linkUrl}>
+        <img class="w-full h-481 object-cover" src={imageUrl} alt={imageAlt}>
+    </a>
+    
+    <!-- Contenido de la Carta -->
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">{title}</div>
+      <p class="text-gray-700 text-base min-h-[8rem]">
+        {description}
+      </p>
+    </div>
+    
+    <!-- Footer de la Carta -->
+    <div class="px-6 pt-4 pb-2 flex justify-between items-center">
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">{category}</span>
+      <time datetime="2020-03-16" class="text-sm">{date}</time>
+    </div>
+  </div>

@@ -1,0 +1,201 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import Card from '../components/ card/Card.astro';
+
+const cards = [
+  {
+    imageUrl: '/img/project/CyberPunk.webp',
+    imageAlt: 'Descripción de la imagen',
+    title: 'Artificial Intelligence',
+    description: 'Im currently learning IA, Machine Learning and neuronal networks',
+    category: 'IA',
+    date: 'March 28, 2024',
+    linkUrl: '/ia'
+  },
+  {
+    imageUrl: '/img/project/jieshop.png',
+    imageAlt: 'Descripción de la imagen',
+    title: 'JieShop',
+    description: 'We are creating a Website where you can buy a lot of products with small fees of importation.',
+    category: 'Online-Store',
+    date: 'March 28, 2024',
+    linkUrl: '/Jieshop'
+  },
+  {
+    imageUrl: '/img/project/book.webp',
+    imageAlt: 'Descripción de la imagen',
+    title: 'Bookdown on R',
+    description: 'I am rearranging the layout of a book on R, using RStudio. Using some Markdown and amsmath with Latex.',
+    category: 'Bookdown',
+    date: 'March 28, 2024',
+    linkUrl: '/Bookdown'
+  }
+  // Añade más objetos aquí para crear más cartas
+];
+
+---
+
+<Layout title="iZack Portfolio">
+	<main>
+	<section class="w-full lg:w-[740px] mx-auto py-44">
+		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-5">
+			Hey, I'm Isaac 
+			<div class="flex justify-center items-center"></div><Badge>Avaliable for hire</Badge>
+		</h1>
+		<h2 class="text-white text-2xl opacity-50">I'm working on IA, Web development and improving my programming skills. Currently studying at Tecnológico de Costa Rica</h2>
+		
+		<div class="flex space-x-4 justify-center items-center pt-2" id="social">
+			<a href="https://www.instagram.com/izackk_r/" target="_blank" class="hover:text-pink-600">
+			  <!-- Ícono de Instagram -->
+			  <img src="/public/img/icons/Instagram.svg" alt="">
+			  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."></path></svg>
+			</a>
+			<a href="https://github.com/iZackk26" target="_blank" class="hover:text-gray-800">
+			  <!-- Ícono de GitHub -->
+			  <img src="/public/img/icons/Github.svg" alt="">
+			  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."></path></svg>
+			</a>
+			<a href="https://www.linkedin.com/in/isaac-ram%C3%ADrez-426b962ab/" target="_blank" class="hover:text-blue-600">
+			  <!-- Ícono de LinkedIn -->
+			  <img src="/public/img/icons/LinkedIn.svg" alt="">
+			  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."></path></svg>
+			</a>
+		</div>
+
+		<div class="wrap">
+			<img src="/public/img/icons/Arrow.svg" id="arrow" class="animated bounce">
+		  </div>
+		<div class="mt-[450px] text-white">
+			<h1 class="text-3xl font-bold flex ">Projects</h1>
+		</div>
+    <div class="flex flex-wrap -mx-2">
+      {cards.map((card) => (
+        <div class="w-full sm:w-1/2 md:w-1/3 px-2 card-hidden">
+          <Card 
+            imageUrl={card.imageUrl} 
+            imageAlt={card.imageAlt} 
+            title={card.title} 
+            description={card.description} 
+            category={card.category} 
+            date={card.date} 
+            linkUrl={card.linkUrl} 
+    />
+        </div>
+      ))}
+    </div>
+    
+	</section>
+	
+	</main>
+</Layout>
+
+<!-- Script de JavaScript para controlar la visibilidad de la flecha -->
+<script>
+  // Asegúrate de que el DOM esté completamente cargado antes de ejecutar el script
+  document.addEventListener('DOMContentLoaded', (event) => {
+
+    const cardElements = document.querySelectorAll('.card-hidden');
+    cardElements.forEach((el) => observer.observe(el));
+
+    function checkScroll() {
+      var arrow = document.getElementById('arrow');
+      if (window.scrollY > 100) {
+        arrow.style.display = 'none';
+      } else {
+        arrow.style.display = 'block';
+      }
+    }
+
+    window.addEventListener('scroll', checkScroll);
+  });
+
+  function setupObserver() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  const cardElements = document.querySelectorAll('.card-hidden');
+  cardElements.forEach((el) => observer.observe(el));
+}
+
+document.addEventListener('DOMContentLoaded', setupObserver);
+</script>
+
+<style>
+
+#social {
+	max-width: 15%;
+}
+
+.wrap {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+img {
+  height: 50px;
+  width: auto;
+}
+
+.wrap img {
+  margin: 0px 0 0 -40px;
+  line-height: 60px;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+}
+
+.bounce {
+  animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+  animation: bounce 3.6s ease infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  5.55556% {
+    transform: translateY(0);
+  }
+  11.11111% {
+    transform: translateY(0);
+  }
+  22.22222% {
+    transform: translateY(-15px);
+  }
+  27.77778% {
+    transform: translateY(0);
+  }
+  33.33333% {
+    transform: translateY(-15px);
+  }
+  44.44444% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.card-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.4s ease-out;
+  transition-delay: 0.3s; /* Retrasa el inicio de la transición */
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+</style>
