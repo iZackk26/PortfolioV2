@@ -11,7 +11,7 @@ const cards = [
     description: 'Im currently learning IA, Machine Learning and neuronal networks',
     category: 'IA',
     date: 'March 28, 2024',
-    linkUrl: '/ia'
+    linkUrl: '/PortfolioV2/ia'
   },
   {
     imageUrl: '/img/project/jieshop.png',
@@ -20,7 +20,7 @@ const cards = [
     description: 'We are creating a Website where you can buy a lot of products with small fees of importation.',
     category: 'Online-Store',
     date: 'March 28, 2024',
-    linkUrl: '/Jieshop'
+    linkUrl: '/PortfolioV2/Jieshop'
   },
   {
     imageUrl: '/img/project/book.webp',
@@ -29,7 +29,7 @@ const cards = [
     description: 'I am rearranging the layout of a book on R, using RStudio. Using some Markdown and amsmath with Latex.',
     category: 'Bookdown',
     date: 'March 28, 2024',
-    linkUrl: '/Bookdown'
+    linkUrl: '/PortfolioV2/Bookdown'
   }
   // Añade más objetos aquí para crear más cartas
 ];
@@ -94,16 +94,20 @@ const cards = [
 <script>
   /* global arrow */
   
-  document.addEventListener('DOMContentLoaded', (event) => {
+  document.addEventListener('DOMContentLoaded', () => {
 
   const arrow = document.getElementById('arrow');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) { // Suponiendo que quieras que desaparezca después de 50px de desplazamiento
-      arrow.classList.add('hidden');
-    } else {
-      arrow.classList.remove('hidden');
-    }
-  });
+  if (arrow) { // Si 'arrow' no es null
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        arrow.classList.add('hidden');
+      } else {
+        arrow.classList.remove('hidden');
+      }
+    });
+  } else {
+    console.log('El elemento arrow no se encontró.');
+  }
 
 });
 </script>
