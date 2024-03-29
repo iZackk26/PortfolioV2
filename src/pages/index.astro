@@ -48,30 +48,30 @@ const cards = [
 		<div class="flex space-x-4 justify-center items-center pt-2" id="social">
 			<a href="https://www.instagram.com/izackk_r/" target="_blank" class="hover:text-pink-600">
 			  <!-- Ícono de Instagram -->
-			  <img src="/public/img/icons/Instagram.svg" alt="">
+			  <img src="/img/icons/Instagram.svg" alt="">
 			  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."></path></svg>
 			</a>
 			<a href="https://github.com/iZackk26" target="_blank" class="hover:text-gray-800">
 			  <!-- Ícono de GitHub -->
-			  <img src="/public/img/icons/Github.svg" alt="">
+			  <img src="/img/icons/Github.svg" alt="">
 			  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."></path></svg>
 			</a>
 			<a href="https://www.linkedin.com/in/isaac-ram%C3%ADrez-426b962ab/" target="_blank" class="hover:text-blue-600">
 			  <!-- Ícono de LinkedIn -->
-			  <img src="/public/img/icons/LinkedIn.svg" alt="">
+			  <img src="/img/icons/LinkedIn.svg" alt="">
 			  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."></path></svg>
 			</a>
 		</div>
 
 		<div class="wrap">
-			<img src="/public/img/icons/Arrow.svg" id="arrow" class="animated bounce">
+			<img src="/img/icons/Arrow.svg" id="arrow" class="animated bounce">
 		  </div>
 		<div class="mt-[450px] text-white">
 			<h1 class="text-3xl font-bold flex ">Projects</h1>
 		</div>
     <div class="flex flex-wrap -mx-2">
       {cards.map((card) => (
-        <div class="w-full sm:w-1/2 md:w-1/3 px-2 card-hidden">
+        <div class="w-full sm:w-1/2 md:w-1/3 px-2">
           <Card 
             imageUrl={card.imageUrl} 
             imageAlt={card.imageAlt} 
@@ -90,40 +90,22 @@ const cards = [
 	</main>
 </Layout>
 
-<!-- Script de JavaScript para controlar la visibilidad de la flecha -->
+
 <script>
-  // Asegúrate de que el DOM esté completamente cargado antes de ejecutar el script
+  /* global arrow */
+  
   document.addEventListener('DOMContentLoaded', (event) => {
 
-    const cardElements = document.querySelectorAll('.card-hidden');
-    cardElements.forEach((el) => observer.observe(el));
-
-    function checkScroll() {
-      var arrow = document.getElementById('arrow');
-      if (window.scrollY > 100) {
-        arrow.style.display = 'none';
-      } else {
-        arrow.style.display = 'block';
-      }
+  const arrow = document.getElementById('arrow');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) { // Suponiendo que quieras que desaparezca después de 50px de desplazamiento
+      arrow.classList.add('hidden');
+    } else {
+      arrow.classList.remove('hidden');
     }
-
-    window.addEventListener('scroll', checkScroll);
   });
 
-  function setupObserver() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  });
-
-  const cardElements = document.querySelectorAll('.card-hidden');
-  cardElements.forEach((el) => observer.observe(el));
-}
-
-document.addEventListener('DOMContentLoaded', setupObserver);
+});
 </script>
 
 <style>
@@ -185,17 +167,6 @@ img {
   }
 }
 
-.card-hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.5s ease-out, transform 1.4s ease-out;
-  transition-delay: 0.3s; /* Retrasa el inicio de la transición */
-}
-
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 
 </style>
