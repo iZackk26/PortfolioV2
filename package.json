@@ -11,9 +11,19 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
+    "@astrojs/react": "^3.1.0",
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource-variable/onest": "^5.0.3",
+    "@material-tailwind/react": "^2.1.9",
+    "@popperjs/core": "^2.11.8",
+    "@types/bootstrap": "^5.2.10",
+    "@types/react": "^18.2.73",
+    "@types/react-dom": "^18.2.23",
     "astro": "^4.5.12",
+    "astro-bootstrap": "^0.6.2",
+    "bootstrap": "^5.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.3"
   }
