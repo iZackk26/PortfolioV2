@@ -3,8 +3,99 @@ import BaseLayout from '../layouts/Layout.astro';
 ---
 
 <BaseLayout title="IA">
-    <h1>About Us</h1>
-    <p>This is the about page.</p>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+        <div class="flex justify-center">
+            <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-5">
+                Artificial Intelligence
+            </h1>
+        </div>
+        <div class="wrap">
+			<img src="/PortfolioV2/img/icons/Arrow.svg" id="arrow" class="animated bounce">
+		</div>
+    </section>
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+        <div class="mt-[450px] text-white">
+			<h1 class="text-3xl font-bold flex ">Projects</h1>
+		</div>
+    </section>
 </BaseLayout>
 
+<script>
+/* global arrow */
 
+document.addEventListener('DOMContentLoaded', () => {
+
+const arrow = document.getElementById('arrow');
+if (arrow) { // Si 'arrow' no es null
+    window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        arrow.classList.add('hidden');
+    } else {
+        arrow.classList.remove('hidden');
+    }
+    });
+} else {
+    console.log('El elemento arrow no se encontró.');
+}
+
+});
+</script>
+
+
+<style>
+
+    
+.wrap {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    height: 50px;
+    width: auto;
+}
+
+.wrap img {
+    margin: 0px 0 0 -40px;
+    line-height: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+}
+
+.bounce {
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation: bounce 3.6s ease infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes bounce {
+    0% {
+    transform: translateY(0);
+    }
+    5.55556% {
+    transform: translateY(0);
+    }
+    11.11111% {
+    transform: translateY(0);
+    }
+    22.22222% {
+    transform: translateY(-15px);
+    }
+    27.77778% {
+    transform: translateY(0);
+    }
+    33.33333% {
+    transform: translateY(-15px);
+    }
+    44.44444% {
+    transform: translateY(0);
+    }
+    100% {
+    transform: translateY(0);
+    }
+}
+    
+</style>

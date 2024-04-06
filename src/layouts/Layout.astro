@@ -1,6 +1,7 @@
 ---
 import ViewTransitions from 'astro/components/ViewTransitions.astro';
 import Header from '../components/navbar/Header.astro';
+import Footer from '../components/footer/Footer.astro';
 // Supports weights 100-900
 import '@fontsource-variable/onest';
 interface Props {
@@ -27,6 +28,7 @@ const { title } = Astro.props;
 
 		<Header />
 		<slot />
+		<Footer />
 
 	</body>
 </html>
