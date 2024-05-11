@@ -3,33 +3,33 @@ import BaseLayout from '../layouts/Layout.astro';
 ---
 
 <BaseLayout title="Bookdown">
-    <section class="w-full lg:w-[740px] mx-auto py-32">
+    <section class="w-full max-w-4xl mx-auto py-16 sm:py-24 lg:py-32" data-aos="zoom-in">
         <div class="container pb-10">
-            <h1 class="text-white text-2xl font-bold flex flex-row gap-x-4 pb-4">
+            <h1 class="text-white text-xl sm:text-2xl font-bold pb-4">
                 What is a Bookdown?
             </h1>
     
-            <h2 class="text-white text-l flex flex-row">
+            <h2 class="text-white text-sm sm:text-base lg:text-lg">
                 Bookdown is a powerful tool that enables you to write technical and scientific books efficiently using a simple markup language called Markdown. With Bookdown, you can organize your content into chapters, sections, and subsections, and include elements such as images, tables, mathematical formulas, and programming code. 
             </h2>
         </div>
-        <div class="flex justify-between mt-3">
-            <div class="w-1/2 pr-2">
+        <div class="flex flex-wrap justify-between mt-3">
+            <div class="w-full sm:w-1/2 pr-2 mb-4 sm:mb-0">
                 <a href="https://bookdown.org/yihui/bookdown/">
-                    <img src="/PortfolioV2/img/bookdown/b1.png" alt="BookdownExample1" class="h-48 w-full object-cover rounded-lg">
+                    <img src="/PortfolioV2/img/bookdown/b1.png" alt="BookdownExample1" class="h-auto w-full object-cover rounded-lg">
                 </a>
             </div>
-            <div class="w-1/2 pr-2">
+            <div class="flex flex-wrap justify-between mt-3">
                 <a href="https://rubenfcasal.github.io/bookdown_intro/intro.html">
-                    <img src="/PortfolioV2/img/bookdown/b2.png" alt="BookdownExample2" class="h-48 w-full object-cover rounded-lg">
+                    <img src="/PortfolioV2/img/bookdown/b2.png" alt="BookdownExample2" class="h-auto w-full object-cover rounded-lg">
                 </a>
             </div>
         </div>
         <div class="container mt-3 mb-4">
-            <h2 class="text-white text-l flex flex-row">
+            <h2 class="text-white text-sm sm:text-base lg:text-lg">
                 Examples like those websites are very well-designed books that everybody can read, with separated sections, titles, clean formatting, etc. Right now, I'm working with my math teacher to convert his simple PDF into a book using Bookdown. That's why I'm learning and utilizing my skills to build that book with resources like LaTeX, R-Studio, and some R to create graphics and other elements.
             </h2>
-            <h1 class="text-blue-600 text-2xl font-bold mt-3 mb-5">Timeline</h1>
+            <h1 class="text-blue-600 text-xl sm:text-2xl font-bold mt-3 mb-5">Timeline</h1>
         </div>
         <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
             <li class="mb-10 ms-6">            
@@ -64,7 +64,7 @@ import BaseLayout from '../layouts/Layout.astro';
             </li>
         </ol>
         <div class="container mt-12 mb-8">
-            <h2 class="text-white text-l flex flex-row">
+            <h2 class="text-white text-sm sm:text-base lg:text-lg">
                 Once the project is completed, the repository, which contains the code and materials used to create the book including the implementation of R formulas for mathematical graphs, will be posted. This delay in sharing the repository is necessary to respect copyright and to protect any private information contained within the project. Once everything is ready and any sensitive information is removed or appropriately secured, the repository will be made available for others to access and review.
             </h2>
         </div>

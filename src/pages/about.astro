@@ -1,84 +1,115 @@
 ---
-import BaseLayout from '../layouts/Layout.astro';
+import BaseLayout from "../layouts/Layout.astro";
 ---
 
 <BaseLayout title="About Us">
-    <section class="w-full lg:w-[740px] mx-auto py-44">
-		<h1 class="text-white text-2xl font-bold flex flex-row gap-x-4 pb-5">
-			Hi, my name is Isaac Ramírez
-		</h1>
-
-        <h2 class="text-white text-l flex flex-row">I'm someone who loves technology, enjoys forming new habits, and likes exploring topics I'm not familiar with.</h2>
-
-        <h1 class="text-white text-2xl font-bold flex flex-row gap-x-4 pb-3 pt-2">
-            ¿Why am I studying Computer Engineering?
-        </h1>
-        <h2 class="text-white text-l flex flex-row mt-1">
-            I have been researching technology since I was a kid. I love how technology can significantly improve our future, from the smallest changes to the biggest ones. My journey began when I played video games as a kid. I didn't study Computer Science to become a game developer; instead, I was fascinated by how developers create software and hardware to solve complex problems. That's why I'm specializing in my career. This fascination led me to start programming when I was 17 years old. As a younger person, I didn't research much because I didn't think it was important. However, I've come to realize that knowledge is power. That's why I now enjoy investigating things I am passionate about and solutions that can make my life easier and help solve complex problems.
-        </h2>
-        <h1 class="text-white text-2xl font-bold flex flex-row gap-x-4 pb-3 pt-2">
-            Skills
-        </h1>
-        <div class="skills-container">
-          <a href="https://www.w3schools.com/c/c_intro.php" target="_blank">
-              <img alt="C" width="33px" src="/PortfolioV2/img/icons/C.svg" />
-          </a>
-          <a href="https://github.com/iZackk26/DataStructureSecondProject" target="_blank">
-              <img alt="C++" width="33px" src="/PortfolioV2/img/icons/C++.svg" />
-          </a>
-          <a href="https://go.dev/" target="_blank">
-              <img alt="Go" width="33px" src="/PortfolioV2/img/icons/Go.svg" />
-          </a>
-          <a href="https://github.com/iZackk26/Restaurant-Handler" target="_blank">
-              <img alt="Java" width="33px" src="/PortfolioV2/img/icons/Java.svg" />
-          </a>
-          <a href="https://github.com/iZackk26/ClimTemp" target="_blank">
-              <img alt="Javascript" width="33px" src="/PortfolioV2/img/icons/JS.svg" />
-          </a>
-          <a href="https://github.com/iZackk26/Quantum_Computer" target="_blank">
-              <img alt="Latex" width="33px" src="/PortfolioV2/img/icons/Latex.svg" />
-          </a>
-          <a href="https://github.com/akhoz/Web-Scraping-Game-Crawler" target="_blank">
-              <img alt="Python" width="33px" src="/PortfolioV2/img/icons/Python.svg" />
-          </a>
-          <a href="https://www.ruby-lang.org/en/" target="_blank">
-              <img alt="Ruby" width="33px" src="/PortfolioV2/img/icons/Ruby.svg" />
-          </a>
-          <a href="https://www.rust-lang.org/" target="_blank">
-              <img alt="Rust" width="33px" src="/PortfolioV2/img/icons/Rust.svg" />
-          </a>
-      </div>
-      <h1 class="text-white text-2xl font-bold flex flex-row gap-x-3 pb-3 pt-3">
-        My interests
+  <section class="w-full max-w-4xl mx-auto py-20 px-4 sm:px-6 lg:py-28 lg:px-8" data-aos="zoom-in">
+    <h1 class="text-white text-xl sm:text-2xl font-bold pb-5">
+      Hi, my name is Isaac Ramírez
     </h1>
-    <h2 class="text-white text-l flex flex-row mt-1">
-      Nowadays, I'm investigating AI, machine learning, deep learning, web development, and UI. Additionally, I've started using Arch Linux as my operating system. I've tried several distributions like Ubuntu, but I really appreciate the level of customization that Arch Linux offers. I've also been improving my English pronunciation through English classes, and I've become accustomed to watching and listening to various content in English. I enjoy building computers, and in the future, I would like to create my own custom mechanical keyboard. Lastly, I've been refining my music preferences because I believe music can bring us energy and happiness.
+
+    <h2 class="text-white text-base sm:text-lg">
+      I'm someone who loves technology, enjoys forming new habits, and likes
+      exploring topics I'm not familiar with.
     </h2>
-    <a href="/PortfolioV2/music" >
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">
+
+    <h1 class="text-white text-xl sm:text-2xl font-bold pb-3 pt-2">
+      ¿Why am I studying Computer Engineering?
+    </h1>
+    <h2 class="text-white text-base sm:text-lg mt-1">
+      I have been researching technology since I was a kid. I love how
+      technology can significantly improve our future, from the smallest changes
+      to the biggest ones. My journey began when I played video games as a kid.
+      I didn't study Computer Science to become a game developer; instead, I was
+      fascinated by how developers create software and hardware to solve complex
+      problems. That's why I'm specializing in my career. This fascination led
+      me to start programming when I was 17 years old. As a younger person, I
+      didn't research much because I didn't think it was important. However,
+      I've come to realize that knowledge is power. That's why I now enjoy
+      investigating things I am passionate about and solutions that can make my
+      life easier and help solve complex problems.
+    </h2>
+    <h1 class="text-white text-xl sm:text-2xl font-bold pb-3 pt-2">
+      Skills
+    </h1>
+    <div class="skills-container flex flex-wrap gap-2 justify-center">
+      <a href="https://www.w3schools.com/c/c_intro.php" target="_blank">
+        <img alt="C" width="33px" src="/PortfolioV2/img/icons/C.svg" />
+      </a>
+      <a
+        href="https://github.com/iZackk26/DataStructureSecondProject"
+        target="_blank"
+      >
+        <img alt="C++" width="33px" src="/PortfolioV2/img/icons/C++.svg" />
+      </a>
+      <a href="https://go.dev/" target="_blank">
+        <img alt="Go" width="33px" src="/PortfolioV2/img/icons/Go.svg" />
+      </a>
+      <a href="https://github.com/iZackk26/Restaurant-Handler" target="_blank">
+        <img alt="Java" width="33px" src="/PortfolioV2/img/icons/Java.svg" />
+      </a>
+      <a href="https://github.com/iZackk26/ClimTemp" target="_blank">
+        <img
+          alt="Javascript"
+          width="33px"
+          src="/PortfolioV2/img/icons/JS.svg"
+        />
+      </a>
+      <a href="https://github.com/iZackk26/Quantum_Computer" target="_blank">
+        <img alt="Latex" width="33px" src="/PortfolioV2/img/icons/Latex.svg" />
+      </a>
+      <a
+        href="https://github.com/akhoz/Web-Scraping-Game-Crawler"
+        target="_blank"
+      >
+        <img
+          alt="Python"
+          width="33px"
+          src="/PortfolioV2/img/icons/Python.svg"
+        />
+      </a>
+      <a href="https://www.ruby-lang.org/en/" target="_blank">
+        <img alt="Ruby" width="33px" src="/PortfolioV2/img/icons/Ruby.svg" />
+      </a>
+      <a href="https://www.rust-lang.org/" target="_blank">
+        <img alt="Rust" width="33px" src="/PortfolioV2/img/icons/Rust.svg" />
+      </a>
+    </div>
+    <h1 class="text-white text-xl sm:text-2xl font-bold pb-3 pt-3">
+      My interests
+    </h1>
+    <h2 class="text-white text-base sm:text-lg mt-1">
+      Nowadays, I'm investigating AI, machine learning, deep learning, web
+      development, and UI. Additionally, I've started using Arch Linux as my
+      operating system. I've tried several distributions like Ubuntu, but I
+      really appreciate the level of customization that Arch Linux offers. I've
+      also been improving my English pronunciation through English classes, and
+      I've become accustomed to watching and listening to various content in
+      English. I enjoy building computers, and in the future, I would like to
+      create my own custom mechanical keyboard. Lastly, I've been refining my
+      music preferences because I believe music can bring us energy and
+      happiness.
+    </h2>
+    <a href="/PortfolioV2/music">
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2"
+      >
         Playlist
       </button>
     </a>
-    
+  </section>
 
+  <style>
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px; /* Espacio entre los elementos */
+      padding: 20px; /* Espacio alrededor de los elementos dentro del contenedor */
+    }
 
-
-
+    .skills-container img {
+      display: block; /* Elimina el espacio extra debajo de las imágenes */
+    }
+  </style>
 </BaseLayout>
-
-<style>
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px; /* Espacio entre los elementos */
-  padding: 20px; /* Espacio alrededor de los elementos dentro del contenedor */
-}
-
-.skills-container img {
-  display: block; /* Elimina el espacio extra debajo de las imágenes */
-}
-</style>
-
-
